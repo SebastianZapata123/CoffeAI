@@ -1,7 +1,7 @@
 // API.js
 export const sendPromptToServer = async (prompt) => {
   try {
-    const response = await fetch("http://localhost:3000/api/coffe", {
+    const response = await fetch("https://coffeaibackend.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
