@@ -1,13 +1,16 @@
 // API.js
 export const sendPromptToServer = async (prompt) => {
   try {
-    const response = await fetch("https://coffeaibackend.onrender.com/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ prompt }), // Envía el prompt como JSON
-    });
+    const response = await fetch(
+      "https://coffeaibackend.onrender.com/api/coffe",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt }), // Envía el prompt como JSON
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Error en la respuesta del servidor");
