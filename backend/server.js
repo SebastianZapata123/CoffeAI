@@ -9,7 +9,7 @@ const port = 3000;
 
 // Configurar CORS para permitir solo el origen específico
 const corsOptions = {
-  origin: "https://coffe-ai.vercel.app",
+  origin: "https://coffe-21h51u9c7-sebastianzapata123s-projects.vercel.app",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
