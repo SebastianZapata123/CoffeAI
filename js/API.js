@@ -2,7 +2,7 @@
 export const sendPromptToServer = async (prompt) => {
   try {
     const response = await fetch(
-      " https://coffeaibackend.vercel.app/api/coffe",
+      " https://railway.com/project/4fbc9710-12fa-422b-a7d2-96e43d97756c?environmentId=41885d07-016c-4128-befb-4a7c33f3f4fd/api/coffe",
       {
         method: "POST",
         headers: {
