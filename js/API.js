@@ -2,7 +2,7 @@
 export const sendPromptToServer = async (prompt) => {
   try {
     const response = await fetch(
-      " coffeaibackend-production.up.railway.app/api/coffe",
+      " https://coffeaibackend-production.up.railway.app/api/coffe", // URL de la API
       {
         method: "POST",
         headers: {
