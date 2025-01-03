@@ -5,6 +5,7 @@ const btn = document.querySelector(".btn-ask");
 
 const createAskToCoffeAI = () => {
   const handleAsk = async (ask) => {
+    // Mostrar mensaje del usuario
     const userMessageDiv = document.createElement("div");
     userMessageDiv.classList.add("me");
     const userMessageText = document.createElement("p");
@@ -16,8 +17,22 @@ const createAskToCoffeAI = () => {
 
     show.scrollTop = show.scrollHeight;
 
+    // Mostrar animación de carga
+    const loadingDiv = document.createElement("div");
+    loadingDiv.classList.add("loading");
+    const loadingText = document.createElement("p");
+    loadingText.innerText = "Cargando...";
+    loadingDiv.appendChild(loadingText);
+    show.appendChild(loadingDiv);
+    show.scrollTop = show.scrollHeight;
+
+    // Esperar la respuesta de la IA
     const responseMessage = await sendPromptToServer(ask);
 
+    // Eliminar animación de carga
+    show.removeChild(loadingDiv);
+
+    // Mostrar respuesta de la IA
     const responseDiv = document.createElement("div");
     responseDiv.classList.add("ia");
     const responseText = document.createElement("p");
@@ -62,4 +77,5 @@ const shakeInput = () => {
   }, 500);
 };
 
+// Llamar a la función para inicializar
 createAskToCoffeAI();

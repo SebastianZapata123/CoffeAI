@@ -178,3 +178,28 @@ body {
     opacity: 1;
   }
 }
+
+.loading {
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  color: gray;
+  margin: 10px 0;
+}
+
+.loading p {
+  margin: 0;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
